@@ -1,0 +1,29 @@
+/*
+*	Crater Skeleton for static/marketing sites
+*	Adapted from Skeleton 1.1
+*	Created 5/10/2012
+*	
+*	Sticky footer based on http://www.cssstickyfooter.com/using-sticky-footer-code.html
+*/
+
+@footer-height: 150px;
+
+html, body {height: 100%;}
+
+#wrap {min-height: 100%;}
+
+#main {overflow:auto;
+	padding-bottom: @footer-height;}  /* must be same height as the footer */
+
+#bottom {position: relative;
+	margin-top: -@footer-height; /* negative value of footer height */
+	height: @footer-height;
+	clear:both;} 
+	
+@media only screen and (max-width: 959px) {
+	/* need to kill sticky footer on mobile */
+	#bottom {
+		height:auto;
+	}
+	
+}
